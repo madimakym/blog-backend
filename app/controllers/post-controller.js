@@ -5,7 +5,6 @@ const postCtrl = {
     if (!req.body.libelle) {
       return res.status(400).json({ message: "Libelle requis" });
     }
-    // console.log("body:", req.body);
     try {
       const post = new Post({
         libelle: req.body.libelle,
@@ -87,7 +86,7 @@ const postCtrl = {
       const data = {
         libelle: req.body.libelle,
         description: req.body.description,
-        categorieId: req.body.categorieId,
+        categoryId: req.body.categoryId,
         visual: req.body.visual,
         status: req.body.status,
       };
